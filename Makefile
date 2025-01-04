@@ -16,6 +16,9 @@ down:
 	@echo "Stopping config ${NAME}..."
 	@docker-compose -f ./srcs/docker-compose.yml down
 
+ps:
+	@docker-compose  -f ./srcs/docker-compose.yml ps -a
+
 re: down 
 	@echo "Restarting config ${NAME}..."
 	@docker-compose -f ./srcs/docker-compose.yml up -d --build

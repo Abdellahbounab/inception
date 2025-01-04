@@ -10,5 +10,39 @@ services:
     # volumes:
     #   - .requirements/tools:/etc/nginx/ssl/
     container_name: nginx
+    networks:
+      - my_network
+  
+  mariadb:
+    build:
+      context: requirements/mariadb/
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_ROOT=${DB_ROOT}
+    ports:
+      - "3306:3306"
+    container_name: mariadb
+    networks:
+      - my_network
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  mariadb_data:
+    # driver: local
+    driver_opts:
+      type: none
+      device: /home/abounab/data/mariadb 
+      o: bind
+   
+  
     
     
