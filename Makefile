@@ -1,8 +1,11 @@
 NAME=inception
 
+VOLUME=./srcs/requirements/tools/volumes.sh
+
 #running config
 all:
 	@echo "Running configuration ${NAME}..."
+	${VOLUME}
 	@docker-compose -f ./srcs/docker-compose.yml up -d
 
 
