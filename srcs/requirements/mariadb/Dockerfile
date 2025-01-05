@@ -2,10 +2,7 @@ FROM debian:12
 
 RUN apt-get update \
 	&& apt-get install mariadb-server -y  \
-	&& mkdir /run/mysqld  && chmod 777 /run/mysqld\
-	&& apt-get install mariadb-client -y
-
-# USER root
+	&& mkdir /run/mysqld  && chmod 777 /run/mysqld
 
 COPY conf/create_db.sh .
 

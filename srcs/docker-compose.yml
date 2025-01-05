@@ -1,33 +1,45 @@
 version: '3'
 
-services:
-  nginx:
-    build:
-      context: requirements/nginx/
-    ports:
-      - "443:443"
-      # dockerfile: requirements/nginx/Dockerfile
-    # volumes:
-    #   - .requirements/tools:/etc/nginx/ssl/
-    container_name: nginx
-    networks:
-      - my_network
-  
+services:  
   mariadb:
+    container_name: mariadb
     build:
       context: requirements/mariadb/
-    environment:
-      - DB_NAME=${MYSQL_NAME}
-      - DB_USER=${MYSQL_USER}
-      - DB_PASS=${MYSQL_PASS}
-      - DB_ROOT=${MYSQL_ROOT}
+    env_file:
+      - .env
     ports:
       - "3306:3306"
-    container_name: mariadb
     networks:
       - my_network
     volumes:
       - mariadb_volume:/var/lib/mysql
+
+  wordpress:
+    container_name: wordpress
+    build:
+      context: requirements/wordpress/
+    env_file:
+      - .env
+    ports:
+      - "9000:9000"
+    networks:
+      - my_network
+    volumes:
+      - wordpress_volume:/var/www/html
+    
+  nginx:
+    container_name: nginx
+    build:
+      context: requirements/nginx/
+    ports:
+      - "443:443"
+    networks:
+      - my_network
+    depends_on:
+      - mariadb
+      - wordpress
+    volumes:
+      - wordpress_volume:/var/www/html
 
 
 
@@ -46,4 +58,3 @@ volumes:
       type: none
       device: /home/abounab/data/wordpress
       o: bind
-    
