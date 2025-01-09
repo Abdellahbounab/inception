@@ -4,7 +4,7 @@ services:
     container_name: mariadb
     build:
       context: requirements/mariadb/
-    image: my_mariadb:1.0
+    image: mariadb:inception
     env_file:
       - .env
     networks:
@@ -14,7 +14,7 @@ services:
 
   wordpress:
     container_name: wordpress
-    image: my_wordpress:1.0
+    image: wordpress:inception
     build:
       context: requirements/wordpress/
     env_file:
@@ -28,7 +28,7 @@ services:
     
   nginx:
     container_name: nginx
-    image: my_nginx:1.0
+    image: ndinx:inception
     build:
       context: requirements/nginx/
     ports:
