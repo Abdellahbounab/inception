@@ -8,11 +8,10 @@ COPY conf/create_db.sh .
 
 RUN chmod +x create_db.sh
 
-EXPOSE 3306
-
-VOLUME [ "/var/lib/mysql" ]
+# EXPOSE 3306
 
 ENTRYPOINT [ "sh", "create_db.sh" ]
 
 CMD [ "/usr/bin/mysqld" ]
+
 

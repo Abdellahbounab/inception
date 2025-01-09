@@ -11,7 +11,6 @@ if [ ! -d "/var/lib/mysql/wordpress" ]; then
 		GRANT ALL PRIVILEGES ON ${MYSQL_NAME}.* TO '${MYSQL_USER}'@'%';
 		FLUSH PRIVILEGES;
 EOF
-# run init.sql
 	echo "database created"
 mariadbd --user=mysql --bootstrap  < /tmp/create_db.sql
 rm -f /tmp/create_db.sql
