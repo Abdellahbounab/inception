@@ -1,4 +1,4 @@
-FROM debian:12
+FROM debian:11
 
 RUN apt-get update \
 	&& apt-get install mariadb-server -y  \
@@ -7,8 +7,6 @@ RUN apt-get update \
 COPY conf/create_db.sh .
 
 RUN chmod +x create_db.sh
-
-# EXPOSE 3306
 
 ENTRYPOINT [ "sh", "create_db.sh" ]
 
