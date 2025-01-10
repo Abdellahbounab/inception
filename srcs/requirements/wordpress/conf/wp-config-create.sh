@@ -23,8 +23,17 @@ wp theme activate twentytwentyfour  --allow-root
 
 wp user create ${MYSQL_USER} ${MYSQL_USER}@example.com --user_pass=${MYSQL_PASS} --role=subscriber --allow-root
 
+#this one related to debian 12
 sed -i "s/^listen = .*/listen = 0.0.0.0:9000/" /etc/php/8.2/fpm/pool.d/www.conf
+
+#this one related with debian 11
+# sed -i "s/^listen = .*/listen = 0.0.0.0:9000/" /etc/php/7.4/fpm/pool.d/www.conf
 
 rm -fr /usr/local/bin/wp-config-create.sh
 
+#this one related with debian 11
+
+
+
+# exec php-fpm7.4 -F
 exec php-fpm8.2 -F

@@ -28,7 +28,7 @@ services:
     
   nginx:
     container_name: nginx
-    image: ndinx:inception
+    image: nginx:inception
     build:
       context: requirements/nginx/
     ports:
