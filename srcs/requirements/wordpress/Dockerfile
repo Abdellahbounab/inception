@@ -1,4 +1,4 @@
-FROM debian:12
+FROM debian:11
 
 RUN apt-get update && apt-get install -y \
 	php-fpm \
@@ -7,10 +7,14 @@ RUN apt-get update && apt-get install -y \
 	php-zip \
 	curl
 
-EXPOSE 9000
-
 COPY conf/wp-config-create.sh /usr/local/bin/wp-config-create.sh
 
 RUN chmod +x /usr/local/bin/wp-config-create.sh
+
+RUN mkdir -p /run/php && \
+    chown -R www-data:www-data /run/php && \
+    chmod -R 755 /run/php
+
+EXPOSE 9000
 
 CMD [ "/bin/sh", "-c", "/usr/local/bin/wp-config-create.sh" ]

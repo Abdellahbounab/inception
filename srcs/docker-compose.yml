@@ -44,15 +44,18 @@ services:
 
 networks:
   my_network:
+    name: my_network
     driver: bridge
 
 volumes:
   mariadb_volume:
+    name: mariadb_volume
     driver_opts:
       type: none
       device: /home/abounab/data/mariadb 
       o: bind
   wordpress_volume:
+    name: wordpress_volume
     driver_opts:
       type: none
       device: /home/abounab/data/wordpress
