@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 if [ ! -d "/var/lib/mysql/wordpress" ]; then
 	echo "Creating database..."

@@ -41,7 +41,6 @@ services:
       - wordpress_volume:/var/www/html/wordpress
 
 
-
 networks:
   my_network:
     name: my_network
