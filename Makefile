@@ -1,11 +1,16 @@
 NAME=inception
 
 VOLUME=./srcs/requirements/tools/volumes.sh
+DIR="/home/abounab/data/"
 
 #running config
 all:
+	mkdir -p "${DIR}"/mariadb
+	mkdir -p "${DIR}"/wordpress
+	sudo chown -R www-data:www-data "${DIR}"/wordpress
+	sudo chmod -R 777 "${DIR}"/wordpress
 	@echo "Running configuration ${NAME}..."
-	${VOLUME}
+	bash ${VOLUME}
 	@docker-compose -f ./srcs/docker-compose.yml up -d
 
 
@@ -30,7 +35,7 @@ re: down
 #cleaning config (system prune -a: remove all unused images )
 clean: down
 	@echo "Cleaning config ${NAME}..."
-	@docker system prune -a
+	@docker system prune -af
 
 fclean:
 	@echo "Complete cleaning of all docker config ${NAME}..."
@@ -38,5 +43,6 @@ fclean:
 	@docker system prune --all --force --volumes
 	@docker network prune --force
 	@docker volume prune --force
+	@sudo rm -rf ~/data/*
 
 .PHONY: all build down re clean fclean

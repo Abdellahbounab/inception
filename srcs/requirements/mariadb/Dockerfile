@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:12
 
 RUN apt-get update \
 	&& apt-get install mariadb-server -y  \
@@ -6,10 +6,8 @@ RUN apt-get update \
 
 COPY conf/create_db.sh .
 
+EXPOSE 3306
+
 RUN chmod +x create_db.sh
 
 ENTRYPOINT [ "sh", "create_db.sh" ]
-
-CMD [ "/usr/bin/mysqld" ]
-
-
