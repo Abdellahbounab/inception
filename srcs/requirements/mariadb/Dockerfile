@@ -10,4 +10,6 @@ EXPOSE 3306
 
 RUN chmod +x create_db.sh
 
-CMD [ "sh", "create_db.sh" ]
+ENTRYPOINT [ "sh", "create_db.sh" ]
+
+CMD [ "mariadbd --user=mysql --bind-address=0.0.0.0" ]

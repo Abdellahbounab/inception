@@ -30,14 +30,11 @@ re: down
 #cleaning config (system prune -a: remove all unused images )
 clean: down
 	@echo "Cleaning config ${NAME}..."
-	@docker system prune -af
+	@docker system prune --all --force
 
-fclean:
+fclean: clean
 	@echo "Complete cleaning of all docker config ${NAME}..."
+	@docker volume rm $$(docker volume ls -q)
 	@sudo rm -rf /home/abounab/data
-	@docker stop $$(docker ps -qa)
-	@docker system prune --all --force --volumes
-	@docker network prune --force
-	@docker volume prune --force
 
 .PHONY: all build down re clean fclean
