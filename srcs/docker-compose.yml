@@ -11,6 +11,9 @@ services:
       - my_network
     volumes:
       - mariadb_volume:/var/lib/mysql
+    secrets:
+      - db_root_password
+      - db_password
 
   wordpress:
     container_name: wordpress
@@ -25,6 +28,9 @@ services:
       - my_network
     volumes:
       - wordpress_volume:/var/www/html/wordpress
+    secrets:
+      - credientials
+      - db_password
     
   nginx:
     container_name: nginx
@@ -59,3 +65,11 @@ volumes:
       type: none
       device: /home/abounab/data/wordpress
       o: bind
+
+secrets:
+  credientials:
+    file: ../secrets/credentials.txt
+  db_root_password:
+    file: ../secrets/db_root_password.txt
+  db_password:
+    file: ../secrets/db_password.txt
