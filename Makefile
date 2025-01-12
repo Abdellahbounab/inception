@@ -5,8 +5,8 @@ VOLUME=./srcs/requirements/tools/volumes.sh
 #running config
 all:
 	@echo "Running configuration of ${NAME}..."
-	@${VOLUME}
-	@docker-compose -f ./srcs/docker-compose.yml up -d
+	@${VOLUME} > /dev/null
+	@docker-compose -f ./srcs/docker-compose.yml up -d > /dev/null
 
 
 #building config
@@ -17,7 +17,7 @@ build:
 #stopping config
 down:
 	@echo "Stopping config ${NAME}..."
-	@docker-compose -f ./srcs/docker-compose.yml down
+	@docker-compose -f ./srcs/docker-compose.yml down > /dev/null
 
 ps:
 	@docker-compose  -f ./srcs/docker-compose.yml ps -a

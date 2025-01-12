@@ -46,6 +46,39 @@ services:
     volumes:
       - wordpress_volume:/var/www/html/wordpress
 
+  redis:
+    container_name: redis
+    image: redis:inception
+    build: 
+      context: requirements/bonus/redis/
+    depends_on:
+      - wordpress
+    networks:
+      - my_network
+    volumes:
+      - redis_volume:/data/
+  
+  # have to be configured
+  adminer:
+    container_name: adminer
+    image: adminer
+    # build: 
+    #   context: requirements/bonus/redis/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+    networks:
+      - my_network
+    volumes:
+      - mariadb_volume:/var/lib/mysql
+
+  # have to be configured
+
+
+
+
+
 
 networks:
   my_network:
@@ -64,6 +97,12 @@ volumes:
     driver_opts:
       type: none
       device: /home/abounab/data/wordpress
+      o: bind
+  redis_volume:
+    name: redis_volume
+    driver_opts:
+      type: none
+      device: /home/abounab/data/redis
       o: bind
 
 secrets:

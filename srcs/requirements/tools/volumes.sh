@@ -8,6 +8,7 @@ if [ ! -d ${DIR} ]; then
 	# Create the directory if it does not exist
 	mkdir -p "${DIR}"/mariadb
 	mkdir -p "${DIR}"/wordpress
+	mkdir -p "${DIR}"/redis
 	sudo chown -R www-data:www-data "${DIR}"/wordpress
 	sudo chmod -R 777 "${DIR}"/wordpress
 

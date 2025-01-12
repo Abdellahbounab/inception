@@ -25,6 +25,13 @@ if [ ! -f /var/www/html/wordpress/wp-config.php ]; then
 	wp theme activate twentytwentythree  --allow-root
 
 	wp user create ${MYSQL_USER} ${MYSQL_USER}@example.com --user_pass=${USER_PASS} --role=subscriber --allow-root
+
+
+	wp config set WP_REDIS_HOST 'redis' --allow-root
+	wp config set WP_CACHE 1  --allow-root
+	wp plugin install redis-cache --activate --allow-root
+	wp redis enable --allow-root
+
 	
 	chown -R www-data:www-data /var/www/html/wordpress
 	chmod -R 755 /var/www/html/wordpress
