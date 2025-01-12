@@ -6,7 +6,7 @@ VOLUME=./srcs/requirements/tools/volumes.sh
 all:
 	@echo "Running configuration of ${NAME}..."
 	@${VOLUME} > /dev/null
-	@docker-compose -f ./srcs/docker-compose.yml up -d > /dev/null
+	@docker-compose -f ./srcs/docker-compose.yml up -d 
 
 
 #building config

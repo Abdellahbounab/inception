@@ -62,8 +62,8 @@ services:
   adminer:
     container_name: adminer
     image: adminer
-    # build: 
-    #   context: requirements/bonus/redis/
+    build: 
+      context: requirements/bonus/adminer/
     ports:
       - "8080:8080"
     depends_on:
