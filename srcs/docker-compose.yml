@@ -70,8 +70,6 @@ services:
       - mariadb
     networks:
       - my_network
-    volumes:
-      - mariadb_volume:/var/lib/mysql
 
   # have to be configured
 
