@@ -71,8 +71,15 @@ services:
     networks:
       - my_network
 
-  # have to be configured
-
+  # static:
+  #   container_name: static
+  #   image: static
+  #   # build: 
+  #   #   context: requirements/bonus/static/
+  #   ports:
+  #     - "80:80"
+  #   networks:
+  #     - my_network
 
 
 
