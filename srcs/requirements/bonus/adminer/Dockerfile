@@ -3,8 +3,9 @@ FROM debian:11
 # Update package list and install necessary packages
 RUN apt-get update && apt-get install -y \
 	php-cli \
-	php-mysqli \
-	wget
+	php-mysqli
+
+RUN apt-get update && apt-get install -y wget
 
 # Download Adminer
 RUN mkdir -p /var/www/html/adminer &&\
