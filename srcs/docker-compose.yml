@@ -1,4 +1,5 @@
 
+# Services
 services:  
   mariadb:
     container_name: mariadb
@@ -61,8 +62,7 @@ services:
     volumes:
       - redis_volume:/data/
     restart: always
-  
-  # have to be configured
+
   adminer:
     container_name: adminer
     image: adminer:inception
@@ -79,7 +79,7 @@ services:
     container_name: static
     image: static:tamghart
     build: 
-      context: requirements/bonus/static/
+      context: requirements/bonus/static_website/
     ports:
       - "80:80"
     networks:
@@ -115,15 +115,13 @@ services:
     restart: always
 
 
-
-
-
-
+# Networks 
 networks:
   my_network:
     name: my_network
     driver: bridge
 
+# Volumes
 volumes:
   mariadb_volume:
     name: mariadb_volume
@@ -144,6 +142,7 @@ volumes:
       device: /home/abounab/data/redis
       o: bind
 
+# Secrets
 secrets:
   credientials:
     file: ../secrets/credentials.txt

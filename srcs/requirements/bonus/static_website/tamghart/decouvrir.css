@@ -1,0 +1,83 @@
+#decouvrir{
+    text-decoration: underline solid;
+}
+/*--main--*/
+
+.categorie img{
+    width: 75%;
+}
+.categorie{
+    margin-left: 10%;
+}
+main article.textone{
+    width: 50ch;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+}
+.motion{
+    display: flex;
+    font-size: 3rem;
+    gap: 8rem;
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.motion p{
+     /* Adjust the value to determine the speed of sliding */
+    animation: slide 20s linear infinite;
+}
+@keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+@media only screen and (max-width:730px) {
+    main .textone{
+        padding: 0;
+    }
+    .promises{
+        padding: 0;
+        font-size: 0.7rem;
+    }
+    .motion{
+        display: flex;
+        gap: 3rem;
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:730px) {
+    main .textone{
+        padding-left: 30rem;
+        
+    }
+    .promises{
+        padding-left: 25rem;
+        font-size: 0.9rem;
+    }
+}
+div.promises{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+}
+.promises{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50rem;
+    gap: 3rem;
+}
+.promises p{
+    font-weight: lighter;
+    
+    font-family: sans-serif;
+    width: 40ch;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+}
+.promis{
+    border-top: 1px solid black;
+}

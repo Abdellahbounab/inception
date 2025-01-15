@@ -1,0 +1,116 @@
+/*--main upper--*/
+main > p{
+    font-weight: lighter ;
+    font-family: sans-serif;
+    margin: 2rem 4rem;
+}
+.products{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.products img{
+    width: 25rem;
+}
+.lighter{
+    max-width: 50ch;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+.description button{
+    width: 100%;
+}
+input[type="number"]{
+    padding: 1rem;
+    width: 5rem;
+    background: transparent;
+}
+
+/*--collection des images--*/
+.image_collection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    left: -10px;
+  }
+  
+  .next-button {
+    right: -10px;
+  }
+  
+
+  /*--ingredints--*/
+
+  .ingredients{
+    padding-top: 5rem;
+    margin: 3rem 5rem;
+  }
+  .reciep{
+    width: 105%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    row-gap: 1rem;
+    padding-top: 2rem;
+  }
+  .rec{
+    border-top: 0.4px solid grey;
+    max-width:30ch ;
+    width: 20rem;
+  }
+  .rec p,.ingredients h3{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+  }
+  .reciep img{
+    width: 30rem;
+  }
+
+  /*--review--*/
+  .review svg{
+    width: 15px;
+  }
+  .review{
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    margin: 5rem 3rem;
+  }
+  .review p{
+    font-family: sans-serif;
+  }
+  /*--recommendation--*/
+  .product{
+    display: block;
+    margin: 0.2rem;
+  }
+  .items{
+    border: none;
+  }
+  .recommondation h3{
+    margin-left: 4rem;
+    font-family: sans-serif;
+  }

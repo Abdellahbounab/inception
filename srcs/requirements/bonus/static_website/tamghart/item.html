@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css for header and fonts-->
+    <link rel="stylesheet" href="store.css">
+    <!--css for recommendation items-->
+    <link rel="stylesheet" href="Boutique.css">
+    <!--css for the item page-->
+    <link rel="stylesheet" href="items.css">
+    <title>Document</title>
+</head>
+<body style="margin: 0;background: #F2DED7;">
+    <header class="flex" style="background: #F2DED7;">
+        <a href="index.html"><div id="logo">Tamghart</div></a>
+        <div class="menu">
+            <a href="Boutique.html" style="text-decoration: underline solid;">Boutique</a>
+            <a href="decouvrir.html">Découvrir</a>
+            <a href="#footer">about</a>
+            <a href="#"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 9h14l1 12H4L5 9Z"></path>
+                <path d="M16 11V7a4 4 0 1 0-8 0v4"></path>
+              </svg></a>
+        </div>
+    </header>
+    <main>
+        <p>Boutiqe > Kiss My Skin</p>
+        <div class="products">
+            <div class="image_collection">
+                <button class="prev-button">&larr;</button>
+                <img src="A1.jpg" alt="product" class="gallery-image">
+                <button class="next-button">&rarr;</button>
+            </div>
+            <div class="description">
+                <h4>Kiss My Skin</h4>
+                <p class="lighter">389 DHs</p>
+                <p class="lighter">290 ml</p>
+                <p class="lighter">Ce produit a été formulé spécialement pour l'hydratation et la régénération. Il contient des vitamines et des minéraux essentiels qui restaureront la vitalité de votre peau.</p>
+                <p class="lighter" >+ Bio<br>+ Cultivé localement<br>+ Sans cruauté envers les animaux</p>
+                <label for="quantite">Quantités:</label><br>
+                <input type="number" value="1" name="quantite">
+                <br>
+                <button>Ajoutez au panier</button>
+            </div>
+        </div>
+        <div class="ingredients">
+            <h3>Ingrédients et mode d'emploi</h3>
+            <article class="reciep">
+                <div class="rec"><p>Thé vert <br>Argousier <br>Extrait d'orange <br>Aloe vera <br>Citronnelle <br>Huile de coco</p></div>
+                <div class="rec"><p>Tout commence par une idée. Peut-être voulez-vous créer une entreprise. <br><br>
+                    Peut-être voulez-vous donner une nouvelle dimension à un passe-temps. 
+                    Ou peut-être avez-vous un projet créatif que vous souhaitez partager avec le monde entier.</p></div>
+                    <img src="reciep.jpg" alt="reciep">
+                </article>
+        </div>
+        <div class="review">
+            <div class="stars">
+                <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.25 9.53h-8.608L12 1.5 9.358 9.53H.75l7.041 4.94L5.05 22.5 12 17.524l6.951 4.976-2.747-8.03 7.046-4.94Z"></path>
+                  </svg>
+                  <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.25 9.53h-8.608L12 1.5 9.358 9.53H.75l7.041 4.94L5.05 22.5 12 17.524l6.951 4.976-2.747-8.03 7.046-4.94Z"></path>
+                  </svg>
+                  <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.25 9.53h-8.608L12 1.5 9.358 9.53H.75l7.041 4.94L5.05 22.5 12 17.524l6.951 4.976-2.747-8.03 7.046-4.94Z"></path>
+                  </svg>
+                  <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.25 9.53h-8.608L12 1.5 9.358 9.53H.75l7.041 4.94L5.05 22.5 12 17.524l6.951 4.976-2.747-8.03 7.046-4.94Z"></path>
+                  </svg>
+                  <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.5 9.75h-8.063L12 2.25l-2.438 7.5H1.5l6.563 4.5-2.532 7.5L12 17.062l6.469 4.688-2.532-7.5 6.563-4.5Z"></path>
+                    <path fill="currentColor" stroke="none" d="M12 2.25v14.813L5.531 21.75l2.532-7.5L1.5 9.75h8.063L12 2.25Z"></path>
+                  </svg>
+            </div>
+            <p>«J'aime beaucoup ce gel douche au parfum subtil. Ma peau est douce et parfaitement hydratée. 
+                J'ai une peau très sèche et ce produit est plus efficace que tous ceux que j'ai essayés auparavant !»</p>
+                <p>Sara.B</p>
+        </div>
+            <div class="recommondation">
+                <h3>Vous aimerez aussi</h3>
+                <article class="items">
+                    <div class="product" id="Corps"><a href="item.html"><img src="C1.jpg" alt=""><img src="C2.jpg" alt="" class="imghover"></a><h5>Limelight Lotion</h5><p>299 DHs</p></div>
+                    <div class="product" id="Cheveaux"><a href="item.html"><img src="D1.jpg" alt=""><img src="D2.jpg" alt="" class="imghover"></a><h5>Minty Sunshine</h5><p>259 DHs</p></div>
+                    <div class="product" id="complements"><a href="item.html"><img src="G1.jpg" alt=""><img src="G2.jpg" alt="" class="imghover"></a><h5>Warm Softness</h5><p>259 DHs</p></div>
+                </article>
+            </div>
+    </main>
+    <div class="goback">
+        <a href="#"><svg width="35" height="35" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.25 11.438 12 4.688l6.75 6.75"></path>
+            <path d="M12 5.625v13.688"></path>
+          </svg></a>
+    </div>
+    <footer id="footer">
+        <div class="up">
+            <a href="index.html" ><div class="logo">Tamghart</div></a>
+            <p>realiser par <span>ABDELLAH BOUNAB</span>
+            </p>
+        </div>
+        <div class="down">
+            <div class="upmenu">
+            <div class="downmenu">
+                    <a href="Boutique.html">Boutique</a>
+                    <a href="decouvrir.html">Découvrir</a>
+            </div>
+                <div class="socialmedia">
+                <h5 style="margin-bottom: 1rem;">
+                    social media
+                </h5>
+                    <a href="https://www.facebook.com/kingpharaon.AB1" target="_blank"><svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M22.5 12.063c0-5.799-4.702-10.5-10.5-10.5s-10.5 4.7-10.5 10.5c0 5.24 3.84 9.584 8.86 10.373v-7.337H7.692v-3.037h2.666V9.75c0-2.63 1.568-4.085 3.966-4.085 1.15 0 2.351.205 2.351.205v2.584h-1.324c-1.304 0-1.712.81-1.712 1.64v1.97h2.912l-.465 3.036H13.64v7.337c5.02-.788 8.859-5.131 8.859-10.373Z" clip-rule="evenodd"></path>
+                      </svg></a>
+                     <a href="https://github.com/Abdellahbounab" target="_blank"> <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.5C6.202 1.5 1.5 6.323 1.5 12.267c0 4.758 3.01 8.79 7.181 10.214a.82.82 0 0 0 .178.019c.39 0 .54-.286.54-.534 0-.258-.01-.933-.015-1.833a4.802 4.802 0 0 1-1.059.126c-2.02 0-2.48-1.57-2.48-1.57-.478-1.242-1.167-1.575-1.167-1.575-.914-.642-.005-.66.066-.66h.004c1.055.093 1.608 1.115 1.608 1.115.525.919 1.228 1.176 1.857 1.176a2.953 2.953 0 0 0 1.2-.28c.093-.695.365-1.168.665-1.44-2.33-.272-4.781-1.195-4.781-5.32 0-1.177.408-2.138 1.078-2.888-.108-.272-.469-1.369.103-2.85a.874.874 0 0 1 .235-.023c.38 0 1.237.145 2.653 1.13a9.76 9.76 0 0 1 5.259 0c1.416-.985 2.273-1.13 2.653-1.13a.873.873 0 0 1 .235.023c.571 1.481.21 2.578.103 2.85.67.755 1.078 1.716 1.078 2.888 0 4.134-2.456 5.043-4.796 5.31.375.333.713.99.713 1.993 0 1.439-.014 2.601-.014 2.953 0 .253.145.539.534.539a.9.9 0 0 0 .188-.019c4.176-1.425 7.181-5.46 7.181-10.214C22.5 6.323 17.798 1.5 12 1.5Z"></path>
+                      </svg></a>
+                      <a href="https://www.linkedin.com/in/abdellah-bounab-6a0006163/" target="_blank"><svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.82 1.5H3.294c-.957 0-1.794.69-1.794 1.635v17.566c0 .951.837 1.799 1.794 1.799h17.521c.963 0 1.685-.854 1.685-1.8V3.136c.006-.946-.722-1.635-1.68-1.635ZM8.01 19.005H5V9.65h3.01v9.354ZM6.61 8.228h-.022c-.963 0-1.586-.716-1.586-1.613C5.002 5.7 5.642 5 6.626 5c.984 0 1.587.695 1.608 1.614 0 .897-.624 1.613-1.625 1.613Zm12.395 10.777h-3.009V13.89c0-1.225-.438-2.063-1.526-2.063-.832 0-1.324.563-1.543 1.111-.082.197-.104.465-.104.739v5.328H9.815V9.65h3.008v1.301c.438-.623 1.122-1.52 2.713-1.52 1.975 0 3.469 1.301 3.469 4.108v5.465Z"></path>
+                      </svg></a>
+                </div>
+                <div class="subscribe">
+                    <p style="font-family: sans-serif;font-size: 0.8rem;">Inscrivez-vous pour recevoir les actualités et les mises à jour.</p>
+                    <input type="email" name="email" id="email" placeholder="Adresse e-mail">
+                    <button type="submit" value="email" style="color: white; border-color: white;">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+        <h5 style="text-align: center;">Copywrite © Abdellah Bounab 2023</h5>
+    </footer>
+
+
+    <script>
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        const galleryImage = document.querySelector('.gallery-image');
+        const images = ['A1.jpg', 'A2.jpg']; // Add more image URLs as needed
+        let currentIndex = 0;
+
+        function showImage(index) {
+        galleryImage.src = images[index];
+        }
+
+        prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+        });
+
+        // Show the first image initially
+        showImage(currentIndex);
+    </script>
+</body>
+</html>

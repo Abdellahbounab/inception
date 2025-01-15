@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Gloock&family=Megrim&family=Nova+Cut&display=swap');
+/*---fonts---
+font-family: 'Arvo', serif;
+font-family: 'Gloock', serif;
+font-family: 'Megrim', cursive;   logo
+font-family: 'Nova Cut', cursive;   button
+*/
+*{
+    font-family: 'Gloock', serif;
+}
+h4{
+    font-size: 2rem;
+    max-width: 15ch;
+    letter-spacing: 1px;
+}
+/*--first-header(.main-one)--*/
+
+
+#logo,.logo{
+    font-family: 'Megrim', cursive;
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+}
+.flex{
+    display: flex;
+}
+header a{
+    text-decoration: none;
+    font-family: 'Arvo', serif;
+}
+header .menu a:hover{
+    color: whitesmoke;
+}
+a{
+    font-family: 'Arvo', serif;
+    color: black;
+}
+header , .main-one {
+    background: #ED9C61;
+}
+.main-one p,.main-one a{
+    font-size: 2rem;
+    max-width: 25ch;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.motion img{
+    margin-top: 2rem;
+    width: 55%;
+    z-index: 1;
+    margin-left: 40%;
+    position: relative;
+}
+header,.main-one .flex,.formule .flex{
+    padding: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.menu a{
+    margin: 0 4rem;    
+    color: black;
+}
+.menu{
+    display: flex;
+    margin:0 2rem;
+    align-items: center;
+}
+.motion > h4{
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    position: absolute;
+    max-width: 100%;
+    top:55%;
+    padding-left: 8%;
+    animation: slide 10s linear infinite;
+}
+.motion{
+    position: relative;
+}
+@keyframes slide {
+    0% {
+      transform: translateX(-20%);
+    }
+    100% {
+      transform: translateX(-80%);
+    }
+  }
+/*--second-part(.version)-->*/
+main img{
+    object-fit: cover;
+}
+
+article.version{
+    background-color: antiquewhite;
+}
+.upper{
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.upper img{
+    width: 20rem;
+}
+.catalogue{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.lower{
+    display: flex;
+    padding: 4rem 0;
+    justify-content: space-around;
+}
+ /*--middle--*/
+.middle{
+    background: #C49F93;
+}
+.middle > .upper img{
+    width: 50rem;
+}
+/*--formule--*/
+.formule{
+    background: #17463B;
+    font-size: 2rem;
+    color: #ED9C61;
+}
+.formule img{
+    margin-left: 20%;
+    margin-top: 5%;
+    width: 30%;
+}
+.formule .flex a{
+    margin: 2rem;
+}
+.formule p{
+    max-width: 30ch;
+}
+/*--lower--*/
+.lower{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+/*--footer--*/
+footer{
+    background: gray;
+    height: fit-content;
+    
+}
+footer p{
+    font-family: sans-serif;
+}
+footer span{
+    color: white;
+    font-family: serif;
+}
+h5{
+    margin: 0;
+}
+.up{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.downmenu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+}
+.upmenu{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.socialmedia a{
+     margin: 0  1rem;
+}
+.subscribe{
+    display: flex;
+    flex-direction: column;
+}
+.subscribe input{
+    padding: 1rem;
+}
+
+/*--button--*/
+button{
+    border: black 3px solid;
+    padding: 1rem;
+    background: transparent;
+    font-family: 'Nova Cut', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+/*-buttom--*/
+.buttom{
+    width: 100%;
+    position: relative;
+}
+.buttom h5{
+    font-size: 5rem ;
+    font-family: sans-serif;
+    font-weight: lighter;
+    max-width: 100%;
+}
+.buttom img{
+    width: 100%;
+}
+.buttom > .abs{
+    position: absolute;
+    top: 1rem;
+    right: 20%;
+}
+.buttom button{
+    margin-left: 40rem;
+}
+
+@media only screen and (max-width:730px){
+    .motion > h4{
+        font-size: 1rem;
+        max-width: 150%;
+    }
+    .buttom h5{
+        font-size: 2rem ;
+    }
+    .buttom > .abs{
+        position: absolute;
+        top: 1rem;
+        left: 20%;
+    }
+    .buttom button{
+        margin-left: 50%;
+    }
+}
+
+/*--up--*/
+.goback svg{
+    position: fixed;
+    background: wheat;
+    right:10px;
+    bottom: 10px;
+    border-radius: 50%;
+}

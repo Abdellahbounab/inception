@@ -1,0 +1,52 @@
+/*--first div--*/
+.catalogue{
+    display: block;
+    text-align: center;
+    margin-top: 4rem;
+    font-family: sans-serif;
+}
+.type a{
+    padding: 0 1.2rem;
+    border-right: 0.5px solid grey ;
+    text-decoration: none;
+}
+.type{
+    padding: 1rem 0;
+}
+/*--article of items--*/
+.items{
+    border-top: 0.5px solid grey ;
+    padding: 4rem;
+    margin-top:2rem ;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+}
+.product{
+    position: relative;
+}
+.items img{
+    width: 24rem;
+}
+.product p{
+    margin: 0 0 3rem 0;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: rgb(59, 59, 59);
+}
+.product h5{
+    margin: 1rem;
+    font-weight: 500;
+}
+img.imghover{
+    position: absolute;
+    right: 0;
+    opacity: 0;
+
+}
+img.imghover:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.7s;
+}
